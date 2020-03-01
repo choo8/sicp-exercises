@@ -1,0 +1,5 @@
+(define (pascal-recur pos level)
+	(cond ((= pos 1) 1)
+			((= pos level) 1)
+			(else (+ (pascal-recur (- pos 1) (- level 1)) 
+					(pascal-recur pos (- level 1))))))

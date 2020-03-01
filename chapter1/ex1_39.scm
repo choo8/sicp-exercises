@@ -1,0 +1,13 @@
+(define (cont-frac N D k)
+	(define (iter-cont-frac count accumulate)
+		(cond ((< count 1) accumulate)
+				(else (iter-cont-frac (- count 1) (/ (N count) (+ (D count) accumulate))))))
+	(iter-cont-frac k 0))
+(define (tan-D i)
+	(+ 1.0 (* 2.0 (- i 1.0))))
+(define (tan-cf x k)
+	(define (tan-N i)
+		(if (= i 1)
+			x
+			(* -1.0 x x)))
+	(cont-frac tan-N tan-D k))
