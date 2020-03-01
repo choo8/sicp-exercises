@@ -61,7 +61,7 @@ _Value: 16_ <br>
 ```
 
 ## Exercise 1.3
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_3.scm)
+[Solution](./ex1_3.scm)
 
 ## Exercise 1.4
 ```
@@ -86,10 +86,10 @@ When finding the square roots of small numbers, the tolerance used may be large 
 
 For very large numbers, due to the limited machine precision when performing arithmetic operations, the algorithm may be stuck trying to get a guess that has a square within 0.0001 of the radicand. For example, when calculating the square root of 1000000000000, the function returns almost immediately with the value of 1000000. However, when calculating the square root of 1000000000000 (one more zero than the previous value), the function gets stuck in an infinite loop. These experiments are run on a 64-bit Ubuntu 16.04 virtual machine.
 
-The new [solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_7.scm) works better well for both small and large numbers.
+The new [solution](./ex1_7.scm) works better well for both small and large numbers.
 
 ## Exercise 1.8
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_8.scm)
+[Solution](./ex1_8.scm)
 
 ## Exercise 1.9
 For the first procedure, it is recursive:
@@ -129,10 +129,10 @@ _Value: 65536_ <br>
 For `(define (f n) (A 0 n))`, `(f n)` computes $2n$. For `(define (g n) (A 1 n))`, `(g n)` computes $2^n$. For `(define (h n) (A 2 n))`, `(h n)` computes $\underbrace{2^{2^{.^{.^{.^2}}}}}_\text{n times}$.
 
 ## Exercise 1.11
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_11.scm)
+[Solution](./ex1_11.scm)
 
 ## Exercise 1.12
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_12.scm)
+[Solution](./ex1_12.scm)
 
 ## Exercise 1.13
 We will prove $Fib(n) = \frac{\phi^n - \psi^n}{\sqrt{5}}$, where $\phi = \frac{1 + \sqrt{5}}{2}$ and $\psi = \frac{1 - \sqrt{5}}{2}$, using induction and the definition of Fibonacci numbers. <br>
@@ -233,13 +233,13 @@ N &\approx \lceil log_3(\frac{a}{0.1}) \rceil \\
 where $N$ is the number of times procedure `p` is applied when `(sine a)` is evaluated.
 
 ## Exercise 1.16
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_16.scm)
+[Solution](./ex1_16.scm)
 
 ## Exercise 1.17
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_17.scm)
+[Solution](./ex1_17.scm)
 
 ## Exercise 1.18
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_18.scm)
+[Solution](./ex1_18.scm)
 
 ## Exercise 1.19
 $$
@@ -253,7 +253,7 @@ T_{p'q'}(a,b) &= T_{pq}(T_{pq}(a,b)) \\
 
 Hence, $p' = p^2 + q^2$ and $q' = 2pq + q^2$.
 
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_19.scm)
+[Solution](./ex1_19.scm)
 
 ## Exercise 1.20
 
@@ -309,19 +309,19 @@ _Value: 1999_ <br>
 _Value: 7_ <br>
 
 ## Exercise 1.22
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_22.scm)
+[Solution](./ex1_22.scm)
 
 Using the procedure, the three smallest primes larger than 100, 10000, 100000 and 1000000 are 1009, 1013 and 1019, 10007, 10009 and 10037, 100003, 100019 and 100043, 1000003, 1000033 and 1000037 respectively.
 
 As the procedure runs too quickly to get a meaningful difference in timing for those results above, I ran the procedure on 1000000000, 10000000000, 100000000000 and 1000000000000. The timings that were recorded were approximately 0.03, 0.08, 0.26 and 1.05 respectively. For every order of 10 growth in $n$, there seems to be an approximately $\sqrt{10}$ growth in timing as well. The results are compatible with the notion that programs on the machine run in time proportional to the number of steps required for computation.
 
 ## Exercise 1.23
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_23.scm)
+[Solution](./ex1_23.scm)
 
 Using the new `next` procedure, the new algorithm runs about 1.5 to 1.7 times as fast as the old one, slightly under 2 times. Although the number of test steps are halved, the `next` procedure has to evaluate an additional `if` predicate expression every time it is called.
 
 ## Exercise 1.24
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_24.scm)
+[Solution](./ex1_24.scm)
 
 Using the `fast-prime?` procedure instead of the `prime?` procedure, the time taken to test for primes near 1000000 is about 0.02 and the time taken to test for primes near 1000000000000 is about 0.04, running the Fermat test 1000 times each time it is called. Since $1000 = 10^3$ and $1000000 = 10^6$, the data does indicate that it takes roughly twice as long for testing primes near 1000000 as compared to that at 1000.
 
@@ -332,17 +332,17 @@ If we were to use `fast-exp`, we would be potentially squaring very large number
 By writing the procedure that way, tree recursion would be performed instead of linear recursion. Since the depth of the call tree would be logarithmic in $n$, the execution time would be linear in $n$. The reason is that instead of recursing on the call once each time `exp` is even, it is instead called twice.
 
 ## Exercise 1.27
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_27.scm)
+[Solution](./ex1_27.scm)
 
 Trying the `full-fermat-test` procedures on the carmichael numbers 561, 1105, 1729, 2465, 2821, 6601, we have verified that the relationship $a^n$ is congruent to $a$ modulo $n$ for all integers $a < n$, for each of the carmichael numbers.
 
 ## Exercise 1.28
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_28.scm)
+[Solution](./ex1_28.scm)
 
 We have verified the procedure by testing with known primes such as 2 and 13, and also the carmichael numbers from previous questions.
 
 ## Exercise 1.29
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_29.scm)
+[Solution](./ex1_29.scm)
 
 Using the Simpson's Rule, we obtained much more accurate results:
 
@@ -353,16 +353,16 @@ _Value: .24999999999999992_ <br>
 _Value: .2500000000000002_ <br>
 
 ## Exercise 1.30
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_30.scm)
+[Solution](./ex1_30.scm)
 
 ## Exercise 1.31
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_31.scm)
+[Solution](./ex1_31.scm)
 
 ## Exercise 1.32
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_32.scm)
+[Solution](./ex1_32.scm)
 
 ## Exercise 1.33
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_33.scm)
+[Solution](./ex1_33.scm)
 
 ## Exercise 1.34
 The combination `(f f)` would lead to an error _The object 2 is not applicable_. This is because the expansion, for both applicative-order and normal-order evaluation, will result in `(2 2)` and `2` is not a procedure.
@@ -400,7 +400,7 @@ f(x) &= 1 + \frac{1}{x} \\
 _Value: 1.6180327868852458_ <br>
 
 ## Exercise 1.36
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_36.scm)
+[Solution](./ex1_36.scm)
 
 Without Average Damping:
 `(fixed-point (lambda (x) (/ (log 1000) (log x))) 1.5)` <br>
@@ -481,21 +481,21 @@ f &= \frac{-1 + \sqrt{5}}{2} \\
   &= \frac{1}{\phi} (Shown) \\
 \end{align*}$$
 
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_37.scm)
+[Solution](./ex1_37.scm)
 
 $k$ had to be 11 to get an approximation that is accurate to 4 decimal places.
 
 ## Exercise 1.38
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_38.scm)
+[Solution](./ex1_38.scm)
 
 ## Exercise 1.39
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_39.scm)
+[Solution](./ex1_39.scm)
 
 ## Exercise 1.40
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_40.scm)
+[Solution](./ex1_40.scm)
 
 ## Exercise 1.41
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_41.scm)
+[Solution](./ex1_41.scm)
 
 `(double double)` causes the procedure `double` to be applied twice, and `(double (double double))` causes the procedure `double` to be applied four times. Hence, `((double (double double)) inc)` causes the procedure `inc` to be applied a total of 16 times (once to twice, to four times, to eight times, to sixteen times), resulting in the answer 21.  
 
@@ -503,18 +503,18 @@ $k$ had to be 11 to get an approximation that is accurate to 4 decimal places.
 _Value: 21_ <br>
 
 ## Exercise 1.42
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_42.scm)
+[Solution](./ex1_42.scm)
 
 ## Exercise 1.43
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_43.scm)
+[Solution](./ex1_43.scm)
 
 ## Exercise 1.44
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_44.scm)
+[Solution](./ex1_44.scm)
 
 ## Exercise 1.45
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_45.scm)
+[Solution](./ex1_45.scm)
 
 Via some experiments, we can see that the minimum number of average damps required to compute the $n$th roots as a fixed-point search is $\lfloor log_{2}n \rfloor$.
 
 ## Exercise 1.46
-[Solution](https://github.com/choo8/sicp-exercises/blob/master/chapter1/ex1_46.scm)
+[Solution](./ex1_46.scm)
