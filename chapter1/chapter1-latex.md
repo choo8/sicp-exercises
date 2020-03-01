@@ -148,7 +148,7 @@ Inductive Step: Assume the induction hypothesis <img src="svgs/9e894cd31ed0bf8a8
 Since <img src="svgs/f4c41f8f1c3b7dd48f48efefb18aefa1.svg" align=middle width=60.790290000000006pt height=31.63940999999999pt/> for all <img src="svgs/55a049b8f161ae7cfeb0197d75aff967.svg" align=middle width=9.830040000000002pt height=14.102549999999994pt/>, <img src="svgs/cf7ca0f9bc62acfa986921e9aa8c2c4f.svg" align=middle width=48.052620000000005pt height=24.56552999999997pt/> is the closest integer to <img src="svgs/cfa069674b2af4fbeee9a86152ac1fa5.svg" align=middle width=17.351729999999996pt height=31.63940999999999pt/>.
 
 ## Exercise 1.14
-<center><img src="/home/joshua/sicp-exercises/chapter1/svgs/test-354.svg"/></center>
+<center><img src="./svgs/tree.svg"/></center>
 
 ### Orders of Growth of Space
 Looking at the tree, we can see the maximum height of the tree grows linearly with <img src="svgs/55a049b8f161ae7cfeb0197d75aff967.svg" align=middle width=9.830040000000002pt height=14.102549999999994pt/>, hence it has a <img src="svgs/272e3ab168729ac17efd78e4c03be40f.svg" align=middle width=35.30538pt height=24.56552999999997pt/> order of growth.

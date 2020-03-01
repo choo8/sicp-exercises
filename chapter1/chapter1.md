@@ -172,7 +172,7 @@ Fib(n) - \frac{\psi^n}{\sqrt{5}} &= -\frac{\phi^n}{\sqrt{5}} \\
 Since $\lvert \frac{\phi^n}{\sqrt{5}} \rvert < \frac{1}{2}$ for all $n$, $Fib(n)$ is the closest integer to $\frac{\psi^n}{\sqrt{5}}$.
 
 ## Exercise 1.14
-<center><img src="/home/joshua/sicp-exercises/chapter1/svgs/test-354.svg"/></center>
+<center><img src="./svgs/tree.svg"/></center>
 
 ### Orders of Growth of Space
 Looking at the tree, we can see the maximum height of the tree grows linearly with $n$, hence it has a $\Theta(n)$ order of growth.
